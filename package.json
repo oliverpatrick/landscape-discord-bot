@@ -1,0 +1,27 @@
+{
+  "name": "landscape-bot",
+  "version": "Alpha 1.0.0",
+  "description": "A discord bot, using discord.js and discord.js commando. The bot is built specifically for the Landscape discord server and features will be added as the server grows.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverpatrick/landscape-discord-bot.git"
+  },
+  "author": "Oliver Patrick + Landscape Discord Server",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliverpatrick/landscape-discord-bot/issues"
+  },
+  "homepage": "https://github.com/oliverpatrick/landscape-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "discord.js-commando": "github:discordjs/Commando",
+    "dotenv": "^8.2.0",
+    "moment": "^2.26.0",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4"
+  }
+}
