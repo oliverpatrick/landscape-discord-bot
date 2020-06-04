@@ -4,7 +4,7 @@ module.exports = class DiceRollCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'guild',
-            group: 'api',
+            group: 'serverinfo',
             memberName: 'guild',
             description: 'Size of the guild.'
         })

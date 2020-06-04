@@ -20,7 +20,7 @@ client.registry
     ['random', 'Random commands'],
     ['api', 'Holds all the api requests'],
     ['memes', 'Meme related commands'],
-    ['serverInfo', 'General server commands']
+    ['serverinfo', 'General server commands']
   ])
   .registerDefaultGroups()
   .registerDefaultCommands()
