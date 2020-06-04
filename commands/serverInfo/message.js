@@ -4,15 +4,13 @@ module.exports = class DiceRollCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'guild',
-            group: 'second',
+            group: 'api',
             memberName: 'guild',
             description: 'Size of the guild.'
         })
     }
 
     run(message) {
-      return message.reply(this.client.guilds.cache.size);
+      return message.reply(e);
     }
 };
-
-//???? guild what is it?

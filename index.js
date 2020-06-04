@@ -3,9 +3,9 @@ const path = require('path');
 const client = new CommandoClient({
   commandPrefix: '!!',
   owner: [
-    '226309085761503232', // - Oringe
+    '226309085761503232', // - Me
     '153892440061902849', // - Sam
-    '246307359259885570' // - Brian
+    '246307359259885570' // - Niall
   ]
 });
 
@@ -18,7 +18,9 @@ client.registry
   .registerDefaultTypes()
   .registerGroups([
     ['random', 'Random commands'],
-    ['second', 'Your Second Command Group']
+    ['api', 'Holds all the api requests'],
+    ['memes', 'Meme related commands'],
+    ['serverInfo', 'General server commands']
   ])
   .registerDefaultGroups()
   .registerDefaultCommands()

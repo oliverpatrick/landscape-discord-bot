@@ -4,7 +4,7 @@ module.exports = class DiceRollCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'yorno',
-            group: 'second',
+            group: 'api',
             memberName: 'yesorno',
             description: 'Gives you the option of yes or no',
             args: [
