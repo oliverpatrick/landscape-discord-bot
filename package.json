@@ -24,8 +24,5 @@
     "moment": "^2.26.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4"
-  },
-  "engines": {
-    "node": "12.13.1"
   }
 }
