@@ -38,20 +38,21 @@ module.exports = class getWeatherCommand extends Command {
       const WeatherURL = `https://api.darksky.net/forecast/${DSKEY}/${lat},${long}?units=si`
 
       fetch(WeatherURL)
-        .then(res => res.json().then(data => {
-          let summary = data.daily.data[0].summary
-          let temp = data.currently.temperature
-          let precip = data.currently.precipProbability
-          let humidity = data.currently.humidity
-          let uvindex = data.currently.uvIndex
-          let visibility = data.currently.visibility
-          let windSpeed = data.currently.windSpeed
-          let dewPoint = data.currently.dewPoint
-          let ozone = data.currently.ozone
-          let cloudCover = data.currently.cloudCover
+        .then(res => res.json()
+          .then(data => {
+            let summary = data.daily.data[0].summary
+            let temp = data.currently.temperature
+            let precip = data.currently.precipProbability
+            let humidity = data.currently.humidity
+            let uvindex = data.currently.uvIndex
+            let visibility = data.currently.visibility
+            let windSpeed = data.currently.windSpeed
+            let dewPoint = data.currently.dewPoint
+            let ozone = data.currently.ozone
+            let cloudCover = data.currently.cloudCover
 
           returnValues(summary, temp, precip, humidity, uvindex, visibility, windSpeed, dewPoint, ozone, cloudCover);
-        })).catch(err => console.log(err));
+        })).catch(err => message.channel.send(err));
     }
 
     function returnValues(sum, temp, precip, hum, uv, vis, wind, dew, oz, cloud) {
