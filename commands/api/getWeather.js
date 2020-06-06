@@ -59,7 +59,7 @@ module.exports = class getWeatherCommand extends Command {
       const weatherEmbed = new Discord.MessageEmbed()
         .setColor("#c30000")
         .setTitle(`${message.author.username}'s Weather Report`)
-        // .setAuthor(message.author.username, message.author.displayAvatarURL)
+       
         .addFields(
           { name: 'Summary', value: sum },
           { name: 'Temperature', value: temp, inline: true },

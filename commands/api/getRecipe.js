@@ -10,14 +10,7 @@ module.exports = class getRecipeCommand extends Command {
       name: 'recipe',
       group: 'api',
       memberName: 'recipe',
-      description: 'Get random recipe',
-    //   args: [
-    //     {
-    //       key: 'address',
-    //       prompt: 'Please enter the location',
-    //       type: 'string',
-    //     }
-    //   ]
+      description: 'Get random recipe'
     })
   }
 
@@ -78,27 +71,22 @@ module.exports = class getRecipeCommand extends Command {
         })).catch(err => message.channel.send(err))
     
     function returnValues(title, category, image, youtube, instructions, ingredients, measurements) {
-        
-        // let ingredientsString = 
-        //     `${ingredients[0]}, ${ingredients[1]}, ${ingredients[2]}, ${ingredients[3]}, ${ingredients[4]}
-        //     ${ingredients[5]}, ${ingredients[6]}, ${ingredients[7]}, ${ingredients[8]}, ${ingredients[9]}
-        //     ${ingredients[10]},${ingredients[11]}, ${ingredients[12]}, ${ingredients[13]}, ${ingredients[14]}
-        //     ${ingredients[15]}, ${ingredients[16]}, ${ingredients[17]}, ${ingredients[18]}, ${ingredients[19]}`
 
         const recipeEmbed = new Discord.MessageEmbed()
             .setColor("#f4f4f4")
             .setTitle(`${title} - Recipe`)
+            .setDescription(instructions)
             .addFields(
                 { name: 'Category', value: category},
                 { name: "Youtube Link", value: youtube }
             )
             .setImage(image)
             .addFields(
-                { name: "Instructions", value: instructions },
+                { name: "Date", value: moment().format('llll') },
                 { name: "Ingredients", value: ingredients },
                 { name: "Measurements", value: measurements }
             )
-            .setFooter(`Date ${moment().format('llll')}`);
+            .setFooter(`${message.author.username} at ${moment().format('llll')}`);
 
     message.channel.send(recipeEmbed);
     }

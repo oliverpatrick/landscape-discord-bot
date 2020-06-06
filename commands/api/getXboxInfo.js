@@ -21,4 +21,9 @@ module.exports = class getXboxInfoCommand extends Command {
       ]
     })
   }
+
+
+  run(message, { tag }) {
+    
+  }
 }
