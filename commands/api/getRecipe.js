@@ -83,8 +83,8 @@ module.exports = class getRecipeCommand extends Command {
             .setImage(image)
             .addFields(
                 { name: "Date", value: moment().format('llll') },
-                { name: "Ingredients", value: ingredients },
-                { name: "Measurements", value: measurements }
+                { name: "Ingredients", value: ingredients, inline: true },
+                { name: "Measurements", value: measurements, inline: true }
             )
             .setFooter(`${message.author.username} at ${moment().format('llll')}`);
 
