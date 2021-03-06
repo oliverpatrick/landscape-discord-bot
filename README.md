@@ -4,9 +4,11 @@ A discord bot, using discord.js and discord.js commando. The bot is built specif
 ** Current Features **
 - Coin Flip (Heads or Tails)
 - Dice Roll 
+- Random Recipe command
+- Weather API
 
 In production:
-- Weather Application (Nearly Completed)
+- N/A
 
 Planned:
 - Game Stats
